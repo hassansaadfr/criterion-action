@@ -4,9 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt update && apt upgrade -y
 RUN apt upgrade --fix-missing -y
-RUN apt install -y libreadline-dev wget cmake valgrind make clang-9
-
-RUN mv /usr/bin/clang-9 /usr/bin/clang
+RUN apt install -y libreadline-dev wget cmake valgrind make clang
 
 RUN wget https://github.com/Snaipe/Criterion/releases/download/v2.3.3/criterion-v2.3.3-linux-x86_64.tar.bz2 \
 	&& tar xvf criterion-v2.3.3-linux-x86_64.tar.bz2
