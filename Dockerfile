@@ -12,4 +12,7 @@ RUN cp -r /criterion-v2.3.3/lib/* /usr/lib/ \
 	&& cp -r /criterion-v2.3.3/include/* /usr/include/ \
 	&& rm criterion-v2.3.3-linux-x86_64.tar.bz2
 
+RUN useradd -m user1
+RUN apt install sudo
+
 ENTRYPOINT make test
