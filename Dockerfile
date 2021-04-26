@@ -2,6 +2,8 @@ FROM debian:buster
 
 ENV DEBIAN_FRONTEND=noninteractive
 
+ENV TERM=xterm
+
 RUN apt update && apt upgrade -y
 RUN apt upgrade --fix-missing -y
 RUN apt install -y libreadline-dev wget cmake valgrind make clang
